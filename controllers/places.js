@@ -7,14 +7,14 @@ router.get("/", (req, res) => {
       city: "Cary",
       state: "NC",
       cuisines: "Mexican",
-      pic: "http://placekitten.com/250/250",
+      pic: "/images/Cary.jpeg",
     },
     {
       name: "Taziki's Mediterranean Cafe",
       city: "Cary",
       state: "NC",
       cuisines: "Mediterranean, Cafe",
-      pic: "http://placekitten.com/250/250",
+      pic: "/images/RTP.jpeg",
     },
   ];
   res.render("places/index", { places });
