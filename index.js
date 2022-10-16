@@ -4,11 +4,11 @@ const express = require("express");
 const app = express();
 
 // Express Settings
-app.set("views", __dirname + "/views");
 app.set("view engine", "jsx");
-app.use("/places", require("../Rest-Rant/controllers/places"));
 app.engine("jsx", require("express-react-views").createEngine());
+app.set("views", __dirname + "/views");
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 
 // Controllers & Routes
 app.use("/places", require("./controllers/places"));
